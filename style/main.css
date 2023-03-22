@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    font: arial, arial, helvetica;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(232, 210, 182);
+}
+
+#main-heading {
+    color: red;
+    font-size: 3.4rem;
+}
+
+.game-container {
+    margin: 12px 2px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+}
+
+.cell {
+    margin: 4px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#game-restart {
+    margin-top: 20px;
+    border: none;
+    border-radius: 4%;
+    font-size: 1.2rem;
+    padding: 8px 16px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+#game-restart:hover {
+    background-color: white;
+    color: blue;
+}
