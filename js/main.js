@@ -47,33 +47,30 @@ function handleResultValidation() {
         let a = gameState[winCondition[0]];
         let b = gameState[winCondition[1]];
         let c = gameState[winCondition[2]];
+
         if (a === '' || b === '' || c === '') {
             continue;
         }
+
         if (a === b && b === c) {
             roundWon = true;
             break
         }
     }
-if (roundWon) {
+
+    if (roundWon) {
         statusDisplay.innerHTML = winningMessage();
         gameActive = false;
         return;
     }
-/* 
-We will check weather there are any values in our game state array 
-that are still not populated with a player sign
-*/
+
     let roundDraw = !gameState.includes("");
     if (roundDraw) {
         statusDisplay.innerHTML = drawMessage();
         gameActive = false;
         return;
     }
-/*
-If we get to here we know that the no one won the game yet, 
-and that there are still moves to be played, so we continue by changing the current player.
-*/
+
     handlePlayerChange();
 }
 
